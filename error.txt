@@ -1,0 +1,4 @@
+codici errori convertitore binario
+visita il sito efish.altervista.org/binario per maggiori informazioni
+1: il modo inserito non è supportato, vengono accettati solo i valori 1,2,esc
+2: c'è un errore nella conversione da codice binario a testo, potrebbe esserci un errore nell'immissione dei caratteri o degli spazi
