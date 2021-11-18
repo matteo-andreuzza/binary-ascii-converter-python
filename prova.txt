@@ -1,0 +1,128 @@
+Python 3.9.2 (tags/v3.9.2:1a79785, Feb 19 2021, 13:44:55) [MSC v.1928 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> st = "ciao"
+>>> toBinary(st)
+Traceback (most recent call last):
+  File "<pyshell#1>", line 1, in <module>
+    toBinary(st)
+NameError: name 'toBinary' is not defined
+>>> toBinary(st)
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    toBinary(st)
+NameError: name 'toBinary' is not defined
+>>> ' '.join(format(x, 'b') for x in bytearray(st, 'utf-8'))
+'1100011 1101001 1100001 1101111'
+>>> def BinaryToDecimal(binary):
+        
+    binary1 = binary
+    decimal, i, n = 0, 0, 0
+    while(binary != 0):
+        dec = binary % 10
+        decimal = decimal + dec * pow(2, i)
+        binary = binary//10
+        i += 1
+    return (decimal)
+
+>>> BinaryToDecimal('10001111100101110010111010111110011')
+Traceback (most recent call last):
+  File "<pyshell#6>", line 1, in <module>
+    BinaryToDecimal('10001111100101110010111010111110011')
+  File "<pyshell#5>", line 6, in BinaryToDecimal
+    dec = binary % 10
+TypeError: not all arguments converted during string formatting
+>>> def BinaryToDecimal(binary):
+        
+    binary1 = binary
+    decimal, i, n = 0, 0, 0
+    while(binary != 0):
+        dec = binary % 10
+        decimal = decimal + dec * pow(2, i)
+        binary = binary//10
+        i += 1
+    return (decimal)
+
+>>> 
+>>> 
+>>> 
+>>> a_binary_string = "01100001 01100010 01100011"
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+>>> # ascii_string = "abc"
+>>> ascii_string
+'abc'
+>>> a_binary_string = "011000010110001001100011"
+>>> ascii_string
+'abc'
+>>> ascii_string = "0110110101100001011011010110110101100001"
+>>> a_binary_string = "0110110101100001011011010110110101100001"
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+Traceback (most recent call last):
+  File "<pyshell#20>", line 1, in <module>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+  File "<pyshell#20>", line 1, in <listcomp>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+OverflowError: Python int too large to convert to C int
+>>> ascii_string
+'0110110101100001011011010110110101100001'
+>>> a_binary_string = "01101101011000010110110101101101"
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+Traceback (most recent call last):
+  File "<pyshell#23>", line 1, in <module>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+  File "<pyshell#23>", line 1, in <listcomp>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+ValueError: chr() arg not in range(0x110000)
+>>> a_binary_string = "011011010110000101101101"
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+Traceback (most recent call last):
+  File "<pyshell#25>", line 1, in <module>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+  File "<pyshell#25>", line 1, in <listcomp>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+ValueError: chr() arg not in range(0x110000)
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+Traceback (most recent call last):
+  File "<pyshell#26>", line 1, in <module>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+  File "<pyshell#26>", line 1, in <listcomp>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in a_binary_string.split(" ")])
+ValueError: chr() arg not in range(0x110000)
+>>> aa = "01101010 011011010 01010101 11010101"
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in aa.split(" ")])
+>>> ascii_string
+'jÚUÕ'
+>>> aa = "0110110101100001011011010110110101100001"
+>>> ascii_string
+'jÚUÕ'
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in aa.split(" ")])
+Traceback (most recent call last):
+  File "<pyshell#32>", line 1, in <module>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in aa.split(" ")])
+  File "<pyshell#32>", line 1, in <listcomp>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in aa.split(" ")])
+OverflowError: Python int too large to convert to C int
+>>> aa = "01101101 01100001 01101101 01101101 01100001"
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in aa.split(" ")])
+>>> ascii_string
+'mamma'
+>>> aa = "01010000 01100001 01101111 01101100 01101111"
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in aa.split(" ")])
+>>> ascii_string
+'Paolo'
+>>> aa = "01000001 01110101 01100111 01110101 01110010 01101001  01000111 01101100 01101111 01110010 01101001 01100001"
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in aa.split(" ")])
+Traceback (most recent call last):
+  File "<pyshell#40>", line 1, in <module>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in aa.split(" ")])
+  File "<pyshell#40>", line 1, in <listcomp>
+    ascii_string = "".join([chr(int(binary, 2)) for binary in aa.split(" ")])
+ValueError: invalid literal for int() with base 2: ''
+>>> aa = "01000001 01110101 01100111 01110101 01110010 01101001"
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in aa.split(" ")])
+>>> ascii_string
+'Auguri'
+>>> aa = "01000111 01101100 01101111 01110010 01101001 01100001"
+>>> ascii_string = "".join([chr(int(binary, 2)) for binary in aa.split(" ")])
+>>> ascii_string
+'Gloria'
+>>> 
