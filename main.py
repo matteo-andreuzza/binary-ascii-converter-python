@@ -1,4 +1,6 @@
 def principale():
+    print("Telemaco versione 0.0.2")
+    print("visita efish.altervista.org/telemaco")
     while True:
         print("[1] = converti da binario a testo")
         print("[2] = converti da testo a binerio")
