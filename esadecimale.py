@@ -1,19 +1,22 @@
- valori= {"0":0, "1":1, "2":2, "3":3, "4":4, "5":5, "6":6, "7":7, "8": 8, "9": 9, "A": 10, "B": 11, "C":12, "D":13, "E": 14, "F":15}
-def esadecimale_a_decimale(number):
-    list=[]
-    number = number.upper()
-    sum=0
-    power=0
+numch = ""
+n=int(input("Numero decimale"))
+deci = [10, 11, 12, 13, 14, 15 ]
+esa = ["a", "b", "c", "d", "e", "f"]
 
-    for i in number:
-        list.append(i)
-    list.reverse()
-    for i in list:
-        t=valori.get(i)
-        sum=sum+t*16**power
-        power=power+1
+if n <= 0:
+    numch = "0"
+else:
+    while n != 0:
+        x = n % 16
+        n = int(n / 16)
 
+        if x < 10:
+            numh = str(x)
+        else:
+            for i in range(7):
+              if x == deci[i-1]:
+                numh = esa[i-1]
 
-    return sum
+        numch = numh + numch
 
-print(esadecimale_a_decimale(input("Please put a hexadecimal number : ")))
+print("Numero esadecimale",numch)
