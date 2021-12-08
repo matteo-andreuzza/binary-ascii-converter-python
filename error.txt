@@ -4,4 +4,4 @@ credits:
     https://github.com/JoseAlfredoPMartinez/Decimal-to-Hexadecimal
     https://github.com/ZrefiXiord/hexadecimal_to_decimal
 1: il modo inserito non è supportato, vengono accettati solo i valori 1,2,3,4, esc
-2: c'è un errore nella conversione da codice binario a testo, potrebbe esserci un errore nell'immissione dei caratteri o degli spazi
+2: c'è un errore nella conversione da codice binario a testo, potrebbe esserci un errore nell'immissione dei caratteri o degli spazi 
